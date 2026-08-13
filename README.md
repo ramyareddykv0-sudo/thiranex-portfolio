@@ -9,10 +9,10 @@ Duration: 09 Aug 2026 - 08 Sept 2026
 Completed the assigned web development task using HTML and CSS.
 
 ## Files Included
-- Index.html
-- About.html
-- Projects.html
-- Contact.html
-- Style.css
+- index.html
+- about.html
+- projects.html
+- contact.html
+- style.css
 
 Submitted for Thiranex Internship Program
