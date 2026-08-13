@@ -16,3 +16,4 @@ Completed the assigned web development task using HTML and CSS.
 - style.css
 
 Submitted for Thiranex Internship Program
+ 
