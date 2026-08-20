@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramya K V | Portfolio</title><meta name="description" content="Ramya K V's personal portfolio showcasing web development, Python and Java skills.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramya K V | Portfolio</title>
+  <style>
+    :root { --bg-color: #f5f7fa; --text-color: #333; --card-bg: #fff; --primary: #1e3a8a; }
+    [data-theme="dark"] { --bg-color: #1e293b; --text-color: #f1f5f9; --card-bg: #334155; --primary: #3b82f6; }
+    body { background: var(--bg-color); color: var(--text-color); font-family: Arial; margin: 0; transition: 0.3s; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: var(--primary); color: white; }
+    .toggle-btn { background: white; color: var(--primary); border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    .hero { text-align: center; padding: 40px 20px; }
+    .container { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
+    .card { background: var(--card-bg); padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    footer { text-align: center; background: var(--primary); color: white; padding: 15px; margin-top: 30px; }
+    @media (min-width: 768px) { .container { grid-template-columns: 1fr 1fr; }
+    @media (min-width: 1024px) { .container { grid-template-columns: 1fr 1fr 1fr; }
+  </style>
 </head>
-
 <body>
 
-    <header>
-        <nav><nav aria-label="Main    navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <nav class="navbar">
+    <h1>Ramya K V</h1>
+    <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark</button>
+  </nav>
 
-    <main>
-        <section>
-            <h1>Hello, I'm Ramya K V</h1>
-            <p>I am a BCA student interested in Python, Java and Web Development.</p>
-        </section>
-    </main>
+  <header class="hero">
+    <h2>Hello, I'm Ramya K V</h2>
+    <p>I am a BCA student interested in Python, Java and Web Development.</p>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 Ramya K V</p>
-    </footer>
+  <main class="container">
+    <div class="card"><h3>Task 1</h3><p>Portfolio Website</p></div>
+    <div class="card"><h3>Task 2</h3><p>Responsive Design with Grid & Flexbox</p></div>
+    <div class="card"><h3>Task 3</h3><p>Coming Soon</p></div>
+  </main>
 
+  <footer><p>© 2026 Ramya K V</p></footer>
+
+  <script>
+    function toggleTheme() {
+      if(document.body.dataset.theme === "dark") {
+        document.body.dataset.theme = "light";
+        document.querySelector('.toggle-btn').innerText = "🌙 Dark";
+      } else {
+        document.body.dataset.theme = "dark";
+        document.querySelector('.toggle-btn').innerText = "☀️ Light";
+      }
+    }
+  </script>
 </body>
-</html>    
+</html>
